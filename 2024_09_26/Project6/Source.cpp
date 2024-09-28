@@ -3,56 +3,54 @@
 
 int main(int argc, char* argv[])
 {
-	int a = 0;
-	int b = 0;
-	int c = 0;
-	int d = 0;
+	long long a = 0;
+	long long b = 0;
+	long long c = 0;
+	long long d = 0;
 	float x1 = 0;
 	float x2 = 0;
 
-	scanf_s("%d", &a);
-	scanf_s("%d", &b);
-	scanf_s("%d", &c);
+	scanf_s("%lld", &a);
+	scanf_s("%lld", &b);
+	scanf_s("%lld", &c);
 
 	d = b * b - 4 * a * c;
 
-	if (a == 0)
+	if (a == 0 && b == 0 && c == 0) 
 	{
-		if (b != 0)
+		printf("-1");
+	}
+	else if (a == 0 && b == 0 && c != 0) 
+	{
+		printf("0");
+	}
+	else if (a != 0)
+	{
+		if (d < 0)
+		{
+			printf("0");
+		}
+		else if (d == 0)
 		{
 			printf("1\n");
-			printf("%f", (-c) / b);
+			x1 = (-b) / (2 * (double)a);
+			printf("%f", x1);
 		}
-		if (b == 0)
+		else if (d > 0)
 		{
-			printf("-1");
+			printf("2\n");
+			x1 = ((-b) - sqrt(d)) / (2 * (double)a);
+			x2 = ((-b) + sqrt(d)) / (2 * (double)a);
+			printf("%f", x1);
+			printf("\n");
+			printf("%f", x2);
 		}
-	}
-	if ((a != 0) and (b == 0) and (c == 0))
-	{
-		printf("1\n");
-		printf("0");
 	}
 	else
 	{
-		if (d >= 0)
-		{
-			x1 = (-b + sqrt(d)) / (2 * a);
-			x2 = (-b - sqrt(d)) / (2 * a);
-			if (x1 == x2)
-			{
-				printf("1\n");
-				printf("%f", x1);
-			}
-			else
-			{
-				printf("2\n");
-				printf("%f", x1);
-				printf("%f", x2);
-
-			}
-		}
-
+		x1 = (-c) / (double)b;
+		printf("1\n");
+		printf("%f", x1);
 	}
-	return 0;
+	return EXIT_SUCCESS;
 }

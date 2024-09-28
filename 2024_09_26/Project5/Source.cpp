@@ -1,4 +1,4 @@
-#include<cstdio> //presentation error??
+#include<cstdio>   
 
 int main(int argc, char* argv[])
 {
@@ -27,71 +27,59 @@ int main(int argc, char* argv[])
 		if (l2 <= lc - l1 && w2 <= wc && h2 <= hc)
 		{
 			printf("YES");
-			return 0;
 		}
-		if (l2 <= lc && w2 <= wc - w1 && h2 <= hc)
+		else if (l2 <= lc && w2 <= wc - w1 && h2 <= hc)
 		{
 			printf("YES");
-			return 0;
 		}
-		if (l2 <= lc && w2 <= wc && h2 <= hc - h1)
+		else if (l2 <= lc && w2 <= wc && h2 <= hc - h1)
 		{
 			printf("YES");
-			return 0;
 		}
 	}
-	if (l1 <= lc && w1 <= wc && h1 <= hc)
+	 else if (l1 <= lc && w1 <= wc && h1 <= hc)
 	{
 		if (l2 <= wc && w2 <= lc - l1 && h2 <= hc)
 		{
 			printf("YES");
-			return 0;
 		}
-		if (l2 <= wc - w1 && w2 <= lc && h2 <= hc)
+		else if (l2 <= wc - w1 && w2 <= lc && h2 <= hc)
 		{
 			printf("YES");
-			return 0;
 		}
-		if (l2 <= wc && w2 <= lc && h2 <= hc - h1)
+		else if (l2 <= wc && w2 <= lc && h2 <= hc - h1)
 		{
 			printf("YES");
-			return 0;
 		}
 	}
-	if (w1 <= lc && l1 <= wc && h1 <= hc)
+	else if (w1 <= lc && l1 <= wc && h1 <= hc)
 	{
 		if (l2 <= lc - w1 && w2 <= wc && h2 <= hc)
 		{
 			printf("YES");
-			return 0;
 		}
-		if (l2 <= lc && w2 <= wc - l1 && h2 <= hc)
+		else if (l2 <= lc && w2 <= wc - l1 && h2 <= hc)
 		{
 			printf("YES");
-			return 0;
 		}
-		if (l2 <= lc && w2 <= wc && h2 <= hc - h1)
+		else if (l2 <= lc && w2 <= wc && h2 <= hc - h1)
 		{
 			printf("YES");
-			return 0;
 		}
 	}
-	if (w1 <= lc && l1 <= wc && h1 <= hc)
+	else if (w1 <= lc && l1 <= wc && h1 <= hc)
 	{
 		if (w2 <= lc - w1 && l2 <= wc && h2 <= hc)
 		{
 			printf("YES");
-			return 0;
 		}
-		if (w2 <= lc && l2 <= wc - l1 && h2 <= hc)
+		else if (w2 <= lc && l2 <= wc - l1 && h2 <= hc)
 		{
 			printf("YES");
-			return 0;
 		}
-		if (w2 <= lc && l2 <= wc && h2 <= hc - h1)
+		else if (w2 <= lc && l2 <= wc && h2 <= hc - h1)
 		{
 			printf("YES");
-			return 0;
 		}
 	}
 	else
