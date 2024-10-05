@@ -1,23 +1,23 @@
-#include <iostream>
+#include<iostream>
 
 int main(int argc, char* argv[])
 {
     int n = 0;
-    int b = 437; // ¬ысота автобуса в сантиметрах
-    scanf_s("%d", &n);// ¬водим количество мостов
+    int b = 437; 
+    scanf_s("%d", &n);
   
    for (int i = 1; i <= n; ++i)
    {
        int b0 = 0;
-       scanf_s("%d", &b0); // ¬водим высоту текущего моста
+       scanf_s("%d", &b0); 
 
-        if (b0 <= b) // ≈сли высота моста меньше или равна высоте автобуса, произойдет авари€
+        if (b0 <= b) 
         {
             printf("Crash ");
             printf("%d", i);
-            return 0;  // «авершаем программу, так как автобус не проедет дальше
+            return 0;  
         }
    }
-    printf("No crash"); // ≈сли ни под одним мостом аварии не произошло
+    printf("No crash"); 
     return 0;
 }

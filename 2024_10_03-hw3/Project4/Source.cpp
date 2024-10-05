@@ -1,28 +1,26 @@
-#include <iostream>
+#include<iostream>
 
-int main()
+int main(int argc, char* argv[])
 {
     int n = 0;
-    scanf_s("%d", &n); // Чтение количества жильцов
+    scanf_s("%d", &n); 
 
-    int max_age = -1; // Хранит максимальный возраст
-    int index = -1; // Хранит индекс (номер) самого старшего мужчины
+    int max_age = -1;   
+    int index = -1;     //old mans number
 
     for (int i = 1; i <= n; ++i)
     {
         int age = 0;
         int gender = 0;
         scanf_s("%d", &age);
-        scanf_s("%d", &gender);  // Чтение возраста и пола
+        scanf_s("%d", &gender);  
 
-        // Проверяем, является ли житель мужчиной
         if (gender == 1)
         {
-            // Если это самый старший мужчина или если это первый найденный мужчина
             if (age > max_age)
             {
                 max_age = age;
-                index = i; // Запоминаем номер
+                index = i;
             }
             else if (age == max_age)
             {
@@ -33,7 +31,6 @@ int main()
             }
         }
     }
-    // Если мужчин не было найдено, index останется -1
     printf("%d\n", index);
-    return 0;
+    return EXIT_SUCCESS;
 }
