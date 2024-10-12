@@ -30,5 +30,5 @@ int main(int argc, char* argv[])
     }
     printf("%d %d", max_num, max_ind);
 
-    return 0;
+    return EXIT_SUCCESS;
 }
