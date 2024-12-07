@@ -65,7 +65,7 @@ int* removeFromBegin(int* arr, int& size)
 
 int main()
 {
-    int size;
+    int size = 0;
     std::cout << "enter the size of the array: ";
     std::cin >> size;
 
@@ -82,7 +82,7 @@ int main()
 
     printArray(arr, currentSize);
 
-    int choice;
+    int choice = 0;
     while (true) 
     {
         std::cout << "\nselect the action:\n";
